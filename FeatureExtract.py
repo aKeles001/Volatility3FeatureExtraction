@@ -4,9 +4,9 @@ import json
 import os
 
 # Modify these paths
-vol_path = r"C:\Users\ahmet\Desktop\volatility\Volatility3-2.5.0\vol.py"
-dump_path = r"C:\Users\ahmet\Desktop\volatility\Dump\Zeus.raw"
-out_dir = r"C:\Users\ahmet\Desktop\volatility\Dump\Output"
+vol_path = r"PATH\volatility\Volatility3-2.5.0\vol.py"
+dump_path = r"PATH\volatility\Dump\Zeus.raw"
+out_dir = r"PATH\volatility\Dump\Output"
 
 os.makedirs(out_dir, exist_ok=True)
 
@@ -63,3 +63,4 @@ features["svcscan.shared_process_services"] = shared_services.sum()
 final_df = pd.DataFrame([features])
 final_df.to_csv(os.path.join(out_dir, "extracted_features.csv"), index=False)
 print(final_df)
+
